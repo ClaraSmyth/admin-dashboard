@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --ff-main: 'Roboto', sans-serif;
+
+    --font-light: white;
+    --font-dark: black;
+
+    --color-one: white;
+    --color-two: #e1e8ef;
+    --color-three: #0193d2;
+    --color-four: #f1b133;
+}
+
 body {
     display: grid;
     grid-template-columns: 250px auto;
