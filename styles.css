@@ -1,23 +1,49 @@
 body {
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 250px auto;
     grid-template-areas:
         'sidebar header'
         'sidebar main'
         'sidebar footer';
 }
 
+/*##############################
+            SIDEBAR
+#############################*/
+
 .sidebar {
     grid-area: sidebar;
 }
 
+/*##############################
+            HEADER
+#############################*/
+
 .header {
     grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
+.header-profile {
+    justify-self: end;
+}
+
+.header-buttons {
+    justify-self: end;
+}
+
+/*##############################
+            MAIN
+#############################*/
 
 .main {
     grid-area: main;
 }
+
+/*##############################
+            FOOTER
+#############################*/
 
 .footer {
     grid-area: footer;
