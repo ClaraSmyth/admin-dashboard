@@ -26,6 +26,18 @@ body {
         'sidebar footer';
     font-family: var(--ff-main);
     font-size: 16px;
+overflow-x: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        grid-template-columns: max-content auto;
+        grid-template-rows: max-content auto;
+        grid-template-areas:
+            'sidebar header'
+            'sidebar main'
+            'sidebar footer';
+    }
 }
 
 /* Modifier */
@@ -110,12 +122,34 @@ body {
     z-index: 1;
 }
 
+@media screen and (max-width: 800px) {
+    .header {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* SEARCH BAR SECTION */
 
 .header-search {
     display: flex;
     align-items: center;
     padding: 1rem;
+}
+
+.header-mobile-nav {
+    display: none;
+    margin-right: 1rem;
+    min-width: 32px;
+}
+
+@media screen and (max-width: 800px) {
+    .header-mobile-nav {
+        display: block;
+    }
+}
+
+.header-search-icon {
+    min-width: 32px;
 }
 
 .header-search-bar {
@@ -182,6 +216,12 @@ body {
     font-size: 1.5rem;
 }
 
+@media screen and (max-width: 800px) {
+    .header-welcome {
+        display: none;
+    }
+}
+
 /* BUTTON SECTION */
 
 .header-buttons {
@@ -190,6 +230,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    gap: 1rem;
 }
 
 .header-btn {
@@ -200,7 +241,6 @@ body {
     width: 5rem;
     border: 3px solid var(--color-three);
     border-radius: 4rem;
-    margin: 0 1rem;
 }
 
 .header-btn:hover {
@@ -220,6 +260,12 @@ body {
     grid-template-columns: 1fr 250px;
     background-color: var(--color-two);
     padding: 1.4rem;
+}
+
+@media screen and (max-width: 800px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* PROJECTS SECTION */
