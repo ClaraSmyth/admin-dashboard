@@ -241,13 +241,14 @@ body {
     justify-content: end;
     align-items: flex-end;
     background-color: var(--color-two);
+    color: var(--font-medium);
     padding-bottom: 0.5rem;
     padding-right: 1rem;
 }
 
 .footer-link {
     text-decoration: none;
-    color: var(--font-dark);
+    color: var(--font-medium);
     font-weight: bold;
     text-shadow: 1px 1px white;
 }
