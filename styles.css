@@ -4,6 +4,7 @@
     --ff-main: 'Roboto', sans-serif;
 
     --font-light: white;
+    --font-medium: hsl(0, 0%, 40%);
     --font-dark: black;
 
     --color-one: white;
@@ -19,6 +20,8 @@ body {
         'sidebar header'
         'sidebar main'
         'sidebar footer';
+    font-family: var(--ff-main);
+    font-size: 16px;
 }
 
 /*##############################
@@ -27,6 +30,21 @@ body {
 
 .sidebar {
     grid-area: sidebar;
+    background-color: var(--color-three);
+    color: var(--font-light);
+}
+
+.sidebar-header {
+    font-size: 2.2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--font-light);
 }
 
 /*##############################
@@ -46,6 +64,19 @@ body {
 .header-buttons {
     justify-self: end;
     display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.header-btn {
+    background-color: var(--color-three);
+    color: var(--font-light);
+    font-weight: bold;
+    height: 2.4rem;
+    width: 5rem;
+    border: none;
+    border-radius: 4rem;
+    margin: 1rem;
 }
 
 /*##############################
@@ -55,22 +86,82 @@ body {
 .main {
     grid-area: main;
     display: grid;
+    gap: 1rem;
     grid-template-columns: 1fr 250px;
+    background-color: var(--color-two);
+    padding: 1.4rem;
 }
 
 .projects {
     grid-row: span 3;
     display: grid;
+    gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: min-content;
 }
 
 .projects-heading {
     grid-column: 1 / -1;
+    margin-left: 1rem;
+}
+
+.projects-card {
+    background-color: var(--color-one);
+    max-height: 250px;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.projects-card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.projects-card-text {
+    font-size: 0.9em;
+    color: var(--font-medium);
 }
 
 .projects-card-btn-container {
     display: flex;
     justify-content: end;
+}
+
+.ancmts-heading {
+    margin-left: 1rem;
+}
+
+.ancmts-card {
+    background-color: var(--color-one);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.ancmts-card-title {
+    font-weight: bold;
+}
+
+.ancmts-card-text {
+    font-size: 0.9em;
+    color: var(--font-medium);
+}
+
+.ancmts-card hr {
+    border: 1px solid var(--font-medium);
+    border-radius: 50%;
+}
+
+.trending-heading {
+    margin-left: 1rem;
+}
+
+.trending-card {
+    background-color: var(--color-one);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
 }
 
 /*##############################
@@ -82,4 +173,13 @@ body {
     display: flex;
     justify-content: end;
     align-items: flex-end;
+    background-color: var(--color-two);
+    padding: 0.5rem;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--font-dark);
+    font-weight: bold;
+    text-shadow: 1px 1px white;
 }
