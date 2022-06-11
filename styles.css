@@ -13,7 +13,7 @@
     --color-four: #f48fb1;
 
     --shadow-light: 0px 0px 10px hsla(0, 0%, 0%, 20%);
-    --shadow-dark: 0px 0px 10px hsla(0, 0%, 0%, 50%);
+    --shadow-dark: 0px 0px 10px hsla(0, 0%, 0%, 40%);
 }
 
 body {
@@ -26,6 +26,12 @@ body {
         'sidebar footer';
     font-family: var(--ff-main);
     font-size: 16px;
+}
+
+/* Modifier */
+
+.display-none {
+    display: none;
 }
 
 /*##############################
@@ -48,20 +54,32 @@ body {
     align-items: center;
 }
 
+.sidebar-nav-link:hover {
+    background-color: var(--color-one);
+    border-radius: 2rem;
+}
+
+.sidebar-nav-link:hover .sidebar-svg {
+    filter: invert(.5) sepia(1) saturate(10) hue-rotate(192deg); 
+}
+
 .sidebar-list {
     padding: 0;
     margin-bottom: 2rem;
 }
 
+.sidebar-text {
+    padding-right: 0.5rem;
+}
+
 .sidebar-link {
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
     width: max-content;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5rem;
     color: var(--font-light);
-    padding: 0 0.5rem;
     margin: 0 1rem 0.5rem;
 }
 
@@ -73,6 +91,7 @@ body {
 
 .sidebar-svg {
     filter: invert(1);
+    margin: 0.5rem;
 }
 
 .sidebar-link:hover .sidebar-svg {
