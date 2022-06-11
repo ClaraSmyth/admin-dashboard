@@ -419,3 +419,7 @@ body {
     font-size: 1.1rem;
     text-shadow: 1px 1px white;
 }
+
+.footer-link:hover {
+    color: var(--color-four);
+}
