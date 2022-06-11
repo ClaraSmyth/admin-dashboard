@@ -18,7 +18,17 @@ width1000.addEventListener('change', () => {
     });
 });
 
-// Toggles sidebar on mobile screen size
+// Toggles sidebar
 mobileNavBtn.addEventListener('click', () => {
     sidebar.classList.toggle('display-none');
+});
+
+// Makes the mobile nav responsive
+width1000.addEventListener('change', () => {
+    width1000.matches == false ? sidebar.classList.add('display-none') : sidebar.classList.remove('display-none');
+});
+
+// Makes sidebar open by default at larger screen sizes
+document.addEventListener("DOMContentLoaded", function(){
+    window.screen.width >= 1200 ? sidebar.classList.remove('display-none') : sidebar.classList.add('display-none');
 });

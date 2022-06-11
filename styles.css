@@ -26,7 +26,7 @@ body {
         'sidebar footer';
     font-family: var(--ff-main);
     font-size: 16px;
-overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 800px) {
@@ -137,12 +137,11 @@ overflow-x: hidden;
 }
 
 .header-mobile-nav {
-    display: none;
     margin-right: 1rem;
     min-width: 32px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     .header-mobile-nav {
         display: block;
     }
