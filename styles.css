@@ -141,6 +141,18 @@ body {
     min-width: 32px;
 }
 
+.header-mobile-nav:hover {
+    background-color: var(--color-three);
+    border-radius: 2rem;
+    outline: 4px solid var(--color-three);
+    outline-offset: -1px;
+    cursor: pointer;
+}
+
+.header-mobile-nav:hover .header-nav-svg {
+    filter: invert(1);
+}
+
 @media screen and (max-width: 1200px) {
     .header-mobile-nav {
         display: block;
@@ -189,8 +201,12 @@ body {
 }
 
 .header-profile-btn:hover {
-    background-color: var(--color-two);
+    background-color: var(--color-three);
     cursor: pointer;
+}
+
+.header-profile-btn:hover .header-profile-svg {
+    filter: invert(1);
 }
 
 /* WELCOME SECTION */
