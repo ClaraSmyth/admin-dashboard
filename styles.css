@@ -16,6 +16,7 @@
 body {
     display: grid;
     grid-template-columns: 250px auto;
+    grid-template-rows: max-content auto;
     grid-template-areas:
         'sidebar header'
         'sidebar main'
@@ -57,15 +58,63 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
+.header-search {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-search-bar {
+    background-color: var(--color-two);
+    border: 0;
+    border-radius: 2rem;
+    height: 2rem;
+    width: 100%;
+    padding-left: 1rem;
+}
+
 .header-profile {
-    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.header-profile-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.header-profile-img {
+    margin-right: 1rem;
+}
+
+.header-welcome {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-welcome-container {
+    margin-left: 1rem;
+}
+
+.header-welcome-text {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.header-welcome-user {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .header-buttons {
-    justify-self: end;
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 .header-btn {
@@ -76,7 +125,7 @@ body {
     width: 5rem;
     border: none;
     border-radius: 4rem;
-    margin: 1rem;
+    margin: 0 1rem;
 }
 
 /*##############################
@@ -149,7 +198,7 @@ body {
 }
 
 .ancmts-card hr {
-    border: 1px solid var(--font-medium);
+    border: 1px solid hsl(0, 0%, 80%);
     border-radius: 50%;
 }
 
@@ -174,7 +223,8 @@ body {
     justify-content: end;
     align-items: flex-end;
     background-color: var(--color-two);
-    padding: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
 }
 
 .footer-link {
