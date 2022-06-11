@@ -211,7 +211,25 @@ body {
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 20px;
+    display: grid;
+    gap: 1rem;
 }
+
+.trending-card-container {
+    display: flex;
+    align-items: center;
+}
+
+.trending-card-text {
+    margin-left: 1rem;
+}
+
+.trending-card-desc {
+    font-size: 0.9rem;
+    color: var(--font-medium)
+}
+
+
 
 /*##############################
             FOOTER
