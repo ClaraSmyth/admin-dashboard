@@ -204,6 +204,7 @@ body {
     gap: 0.5rem;
     background-color: var(--color-one);
     padding: 1rem;
+    border-left: 6px solid var(--color-four);
     border-radius: 20px;
     box-shadow: var(--shadow-light);
 }
