@@ -13,7 +13,7 @@
 
 ## Description
 
-This is a webpage created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
+This is an admin dashboard created as part of [TheOdinProject](https://www.theodinproject.com) curriculum.
 
 To see the assignment details - [Click Here](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard)
 
