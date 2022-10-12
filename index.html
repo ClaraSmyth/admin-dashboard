@@ -1,170 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./script.js" defer></script>
-    <title>Admin Dashboard</title>
-</head>
-<body>
-    <nav class="sidebar display-none">
-        <h1 class="sidebar-header"><a class="sidebar-nav-link"><img class="sidebar-svg" src="./icons/view-dashboard.svg" width="32px" height="32px" alt=""></a><span class="sidebar-text">Dashboard</span></h1>
-        <ul class="sidebar-list" role="list">
-            <li><a class="sidebar-link" href="#"><img class="sidebar-svg" src="./icons/home.svg" width="32px" alt=""><span class="sidebar-text">Home</span></a></li>
-            <li><a class="sidebar-link" href="#"><img class="sidebar-svg" src="./icons/account-circle.svg" width="32px" alt=""><span class="sidebar-text">Profile</span></a></li>
-            <li><a class="sidebar-link" href="#"><img class="sidebar-svg" src="./icons/android-messages.svg" width="32px" alt=""><span class="sidebar-text">Messages</span></a></li>
-            <li><a class="sidebar-link" href="#"><img class="sidebar-svg" src="./icons/clock.svg" width="32px" alt=""><span class="sidebar-text">History</span></a></li>
-            <li><a class="sidebar-link" href="#"><img class="sidebar-svg" src="./icons/file.svg" width="32px" alt=""><span class="sidebar-text">Tasks</span></a></li>
-            <li><a class="sidebar-link" href="#"><img class="sidebar-svg" src="./icons/account-group.svg" width="32px" alt=""><span class="sidebar-text">Communities</span></a></li>
-        </ul>
-        <ul class="sidebar-list" role="list">
-            <li><a class="sidebar-link" href="#"><img class="sidebar-svg" src="./icons/cog.svg" width="32px" alt=""><span class="sidebar-text">Settings</span></a></li>
-            <li><a class="sidebar-link" href="#"><img class="sidebar-svg" src="./icons/help-circle.svg" width="32px" alt=""><span class="sidebar-text">Support</span></a></li>
-            <li><a class="sidebar-link" href="#"><img class="sidebar-svg" src="./icons/shield-check.svg" width="32px" alt=""><span class="sidebar-text">Privacy</span></a></li>
-        </ul>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./reset.css" />
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="./script.js" defer></script>
+        <title>Admin Dashboard</title>
+    </head>
+    <body>
+        <nav class="sidebar display-none">
+            <h1 class="sidebar-header">
+                <a class="sidebar-nav-link"
+                    ><img class="sidebar-svg" src="./icons/view-dashboard.svg" width="32px" height="32px" alt="" /></a
+                ><span class="sidebar-text">Dashboard</span>
+            </h1>
+            <ul class="sidebar-list" role="list">
+                <li>
+                    <a class="sidebar-link" href="#"
+                        ><img class="sidebar-svg" src="./icons/home.svg" width="32px" alt="" /><span
+                            class="sidebar-text"
+                            >Home</span
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a class="sidebar-link" href="#"
+                        ><img class="sidebar-svg" src="./icons/account-circle.svg" width="32px" alt="" /><span
+                            class="sidebar-text"
+                            >Profile</span
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a class="sidebar-link" href="#"
+                        ><img class="sidebar-svg" src="./icons/android-messages.svg" width="32px" alt="" /><span
+                            class="sidebar-text"
+                            >Messages</span
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a class="sidebar-link" href="#"
+                        ><img class="sidebar-svg" src="./icons/clock.svg" width="32px" alt="" /><span
+                            class="sidebar-text"
+                            >History</span
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a class="sidebar-link" href="#"
+                        ><img class="sidebar-svg" src="./icons/file.svg" width="32px" alt="" /><span
+                            class="sidebar-text"
+                            >Tasks</span
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a class="sidebar-link" href="#"
+                        ><img class="sidebar-svg" src="./icons/account-group.svg" width="32px" alt="" /><span
+                            class="sidebar-text"
+                            >Communities</span
+                        ></a
+                    >
+                </li>
+            </ul>
+            <ul class="sidebar-list" role="list">
+                <li>
+                    <a class="sidebar-link" href="#"
+                        ><img class="sidebar-svg" src="./icons/cog.svg" width="32px" alt="" /><span class="sidebar-text"
+                            >Settings</span
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a class="sidebar-link" href="#"
+                        ><img class="sidebar-svg" src="./icons/help-circle.svg" width="32px" alt="" /><span
+                            class="sidebar-text"
+                            >Support</span
+                        ></a
+                    >
+                </li>
+                <li>
+                    <a class="sidebar-link" href="#"
+                        ><img class="sidebar-svg" src="./icons/shield-check.svg" width="32px" alt="" /><span
+                            class="sidebar-text"
+                            >Privacy</span
+                        ></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-    <header class="header">
-        <div class="header-search">
-            <a class="header-mobile-nav"><img class="header-nav-svg" src="./icons/menu.svg" width="32px" height="32px" alt=""></a>
-            <label class="header-search-icon" for="search"><img src="./icons/magnify.svg" width="32px" height="32px" alt="Magnifying Glass Icon"></label>
-            <input class="header-search-bar" type="search" id="search" name="search"> 
-        </div>
-        <div class="header-profile">
-            <button class="header-profile-btn"><img class="header-profile-svg" src="./icons/bell-ring-outline.svg" width="28px" alt=""></button>
-            <img class="header-profile-img" src="./img/reshot-icon-koala-NX7HW2CBSF.svg" width="48px" height="48px" alt="Profile Picture">
-            <p class="header-profile-text">Morgan Oakley</p>
-        </div>
-        <div class="header-welcome">
-            <img class="header-welcome-img" src="./img/reshot-icon-koala-NX7HW2CBSF.svg" width="64px" height="64px" alt="Profile Picture">
-            <div class="header-welcome-container">
-                <p class="header-welcome-text">Hi there,</p>
-                <p class="header-welcome-user">Morgan Oakley (@morgan)</p>
+        <header class="header">
+            <div class="header-search">
+                <a class="header-mobile-nav"
+                    ><img class="header-nav-svg" src="./icons/menu.svg" width="32px" height="32px" alt=""
+                /></a>
+                <label class="header-search-icon" for="search"
+                    ><img src="./icons/magnify.svg" width="32px" height="32px" alt="Magnifying Glass Icon"
+                /></label>
+                <input class="header-search-bar" type="search" id="search" name="search" />
             </div>
-        </div>
-        <div class="header-buttons">
-            <button class="header-btn">New</button>
-            <button class="header-btn">Upload</button>
-            <button class="header-btn">Share</button>
-        </div>
-    </header>
+            <div class="header-profile">
+                <button class="header-profile-btn">
+                    <img class="header-profile-svg" src="./icons/bell-ring-outline.svg" width="28px" alt="" />
+                </button>
+                <img
+                    class="header-profile-img"
+                    src="./img/reshot-icon-koala-NX7HW2CBSF.svg"
+                    width="48px"
+                    height="48px"
+                    alt="Profile Picture"
+                />
+                <p class="header-profile-text">Morgan Oakley</p>
+            </div>
+            <div class="header-welcome">
+                <img
+                    class="header-welcome-img"
+                    src="./img/reshot-icon-koala-NX7HW2CBSF.svg"
+                    width="64px"
+                    height="64px"
+                    alt="Profile Picture"
+                />
+                <div class="header-welcome-container">
+                    <p class="header-welcome-text">Hi there,</p>
+                    <p class="header-welcome-user">Morgan Oakley (@morgan)</p>
+                </div>
+            </div>
+            <div class="header-buttons">
+                <button class="header-btn">New</button>
+                <button class="header-btn">Upload</button>
+                <button class="header-btn">Share</button>
+            </div>
+        </header>
 
-    <main class="main">
-        <section class="projects">
-            <h2 class="projects-heading">Your Projects</h2>
-            <div class="projects-card">
-                <p class="projects-card-title">Project 1</p>
-                <p class="projects-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="projects-card-btn-container">
-                    <button class="projects-card-btn"><img src="./icons/star-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/eye-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/source-fork.svg" width="28px" alt=""></button>
-                </div>
-            </div>
-            <div class="projects-card">
-                <p class="projects-card-title">Project 2</p>
-                <p class="projects-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="projects-card-btn-container">
-                    <button class="projects-card-btn"><img src="./icons/star-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/eye-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/source-fork.svg" width="28px" alt=""></button>
-                </div>
-            </div>
-            <div class="projects-card">
-                <p class="projects-card-title">Project 3</p>
-                <p class="projects-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="projects-card-btn-container">
-                    <button class="projects-card-btn"><img src="./icons/star-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/eye-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/source-fork.svg" width="28px" alt=""></button>
-                </div>
-            </div>
-            <div class="projects-card">
-                <p class="projects-card-title">Project 4</p>
-                <p class="projects-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="projects-card-btn-container">
-                    <button class="projects-card-btn"><img src="./icons/star-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/eye-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/source-fork.svg" width="28px" alt=""></button>
-                </div>
-            </div>
-            <div class="projects-card">
-                <p class="projects-card-title">Project 5</p>
-                <p class="projects-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="projects-card-btn-container">
-                    <button class="projects-card-btn"><img src="./icons/star-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/eye-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/source-fork.svg" width="28px" alt=""></button>
-                </div>
-            </div>
-            <div class="projects-card">
-                <p class="projects-card-title">Project 6</p>
-                <p class="projects-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="projects-card-btn-container">
-                    <button class="projects-card-btn"><img src="./icons/star-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/eye-plus-outline.svg" width="28px" alt=""></button>
-                    <button class="projects-card-btn"><img src="./icons/source-fork.svg" width="28px" alt=""></button>
-                </div>
-            </div>
-        </section>
-
-        <section class="ancmts">
-            <h2 class="ancmts-heading">Announcements</h2>
-            <div class="ancmts-card">
-                <p class="ancmts-card-title">Site Maintenance</p>
-                <p class="ancmts-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <hr>
-                <p class="ancmts-card-title">Community Share Day</p>
-                <p class="ancmts-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <hr>
-                <p class="ancmts-card-title">Updated Privacy Policy</p>
-                <p class="ancmts-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </section>
-
-        <section class="trending">
-            <h2 class="trending-heading">Trending</h2>
-            <div class="trending-card">
-                <div class="trending-card-container">
-                    <img class="trending-card-img" src="./img/reshot-icon-turtle-57G32AFZM4.svg" width="48px" alt="Profile Picture">
-                    <div class="trending-card-text">
-                        <p class="trending-card-user">@tegan</p>
-                        <p class="trending-card-desc">World Peace Builder</p>
+        <main class="main">
+            <section class="projects">
+                <h2 class="projects-heading">Your Projects</h2>
+                <div class="projects-card">
+                    <p class="projects-card-title">Project 1</p>
+                    <p class="projects-card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="projects-card-btn-container">
+                        <button class="projects-card-btn">
+                            <img src="./icons/star-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/eye-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/source-fork.svg" width="28px" alt="" />
+                        </button>
                     </div>
                 </div>
-
-                <div class="trending-card-container">
-                    <img class="trending-card-img" src="./img/reshot-icon-koala-NX7HW2CBSF.svg" width="48px" alt="Profile Picture">
-                    <div class="trending-card-text">
-                        <p class="trending-card-user">@morgan</p>
-                        <p class="trending-card-desc">Super Cool Project</p>
+                <div class="projects-card">
+                    <p class="projects-card-title">Project 2</p>
+                    <p class="projects-card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="projects-card-btn-container">
+                        <button class="projects-card-btn">
+                            <img src="./icons/star-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/eye-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/source-fork.svg" width="28px" alt="" />
+                        </button>
                     </div>
                 </div>
-
-                <div class="trending-card-container">
-                    <img class="trending-card-img" src="./img/reshot-icon-panda-K7MQXCEJF2.svg" width="48px" alt="Profile Picture">
-                    <div class="trending-card-text">
-                        <p class="trending-card-user">@kendall</p>
-                        <p class="trending-card-desc">Life Changing App</p>
+                <div class="projects-card">
+                    <p class="projects-card-title">Project 3</p>
+                    <p class="projects-card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="projects-card-btn-container">
+                        <button class="projects-card-btn">
+                            <img src="./icons/star-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/eye-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/source-fork.svg" width="28px" alt="" />
+                        </button>
                     </div>
                 </div>
-
-                <div class="trending-card-container">
-                    <img class="trending-card-img" src="./img/reshot-icon-duck-RYZ2P59AGC.svg" width="48px" alt="Profile Picture">
-                    <div class="trending-card-text">
-                        <p class="trending-card-user">@alex</p>
-                        <p class="trending-card-desc">No Traffic Maker</p>
+                <div class="projects-card">
+                    <p class="projects-card-title">Project 4</p>
+                    <p class="projects-card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="projects-card-btn-container">
+                        <button class="projects-card-btn">
+                            <img src="./icons/star-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/eye-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/source-fork.svg" width="28px" alt="" />
+                        </button>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+                <div class="projects-card">
+                    <p class="projects-card-title">Project 5</p>
+                    <p class="projects-card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="projects-card-btn-container">
+                        <button class="projects-card-btn">
+                            <img src="./icons/star-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/eye-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/source-fork.svg" width="28px" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <div class="projects-card">
+                    <p class="projects-card-title">Project 6</p>
+                    <p class="projects-card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="projects-card-btn-container">
+                        <button class="projects-card-btn">
+                            <img src="./icons/star-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/eye-plus-outline.svg" width="28px" alt="" />
+                        </button>
+                        <button class="projects-card-btn">
+                            <img src="./icons/source-fork.svg" width="28px" alt="" />
+                        </button>
+                    </div>
+                </div>
+            </section>
 
-    <footer class="footer">
-        <p>Created by <a class="footer-link" href="https://github.com/ClaraSmyth">Clara</a> for <a class="footer-link" href="https://www.theodinproject.com">TheOdinProject</a></p>
-    </footer>
-</body>
+            <section class="ancmts">
+                <h2 class="ancmts-heading">Announcements</h2>
+                <div class="ancmts-card">
+                    <p class="ancmts-card-title">Site Maintenance</p>
+                    <p class="ancmts-card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <hr />
+                    <p class="ancmts-card-title">Community Share Day</p>
+                    <p class="ancmts-card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <hr />
+                    <p class="ancmts-card-title">Updated Privacy Policy</p>
+                    <p class="ancmts-card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </section>
+
+            <section class="trending">
+                <h2 class="trending-heading">Trending</h2>
+                <div class="trending-card">
+                    <div class="trending-card-container">
+                        <img
+                            class="trending-card-img"
+                            src="./img/reshot-icon-turtle-57G32AFZM4.svg"
+                            width="48px"
+                            alt="Profile Picture"
+                        />
+                        <div class="trending-card-text">
+                            <p class="trending-card-user">@tegan</p>
+                            <p class="trending-card-desc">World Peace Builder</p>
+                        </div>
+                    </div>
+
+                    <div class="trending-card-container">
+                        <img
+                            class="trending-card-img"
+                            src="./img/reshot-icon-koala-NX7HW2CBSF.svg"
+                            width="48px"
+                            alt="Profile Picture"
+                        />
+                        <div class="trending-card-text">
+                            <p class="trending-card-user">@morgan</p>
+                            <p class="trending-card-desc">Super Cool Project</p>
+                        </div>
+                    </div>
+
+                    <div class="trending-card-container">
+                        <img
+                            class="trending-card-img"
+                            src="./img/reshot-icon-panda-K7MQXCEJF2.svg"
+                            width="48px"
+                            alt="Profile Picture"
+                        />
+                        <div class="trending-card-text">
+                            <p class="trending-card-user">@kendall</p>
+                            <p class="trending-card-desc">Life Changing App</p>
+                        </div>
+                    </div>
+
+                    <div class="trending-card-container">
+                        <img
+                            class="trending-card-img"
+                            src="./img/reshot-icon-duck-RYZ2P59AGC.svg"
+                            width="48px"
+                            alt="Profile Picture"
+                        />
+                        <div class="trending-card-text">
+                            <p class="trending-card-user">@alex</p>
+                            <p class="trending-card-desc">No Traffic Maker</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>
+                Created by <a target="_blank" class="footer-link" href="https://github.com/ClaraSmyth">Clara</a> for
+                <a target="_blank" class="footer-link" href="https://www.theodinproject.com">TheOdinProject</a>
+            </p>
+        </footer>
+    </body>
 </html>
